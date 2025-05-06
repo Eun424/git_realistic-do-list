@@ -1,3 +1,220 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  font-family: 'Roboto', 'Lucida Sans', 'Lucida Sans ';
+
+
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  
+  background-color: rgba(165, 42, 42, 0.199);
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+ /* overflow-x: hidden; */
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+
+.main-container{
+    margin: 0 5rem;
+    padding: .5rem; 
+}
+
+
+.input-cont{
+display: flex;
+position: relative;
+}
+
+.search-icon{
+    position: absolute;
+    left: 1rem;
+    bottom: .7rem;
+    color: black;
+}
+
+.mic{
+    position: absolute;
+    right: 1rem;
+    bottom: .7rem;
+    color: black;
+}
+
+input{
+   width: 100%;
+   background-color: rgba(128, 128, 128, 0.486);
+   border: none;
+   border-radius: .5rem;
+   padding: .7rem;
+   
+   
+}
+
+input[type="search"]{
+padding-left: 2.5rem;
+
+}
+
+input:focus{
+    outline: none;
+}
+
+.top-sect{
+    margin: 2rem 0 ;
+
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    
+}
+
+.cards{
+    display: flex;
+    gap: 2rem;
+background-color: white;
+padding: 1.5rem 2rem;
+border-radius: 2rem;
+cursor: pointer;
+line-height: 1.5;
+
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cards i{
+    font-size: 2rem;
+}
+
+p{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.cards span{
+    color: grey;
+}
+
+.first {
+color: brown;
+
+}
+.second {
+color: yellow;
+
+}
+.third {
+color: gray;
+
+}
+.fourth {
+color: rgba(255, 0, 0, 0.692);
+
+}
+
+.lists{
+margin-top: 3rem;
+}
+
+.lists ul{
+    text-decoration: none;
+    background-color: white;
+    border-radius: .5rem;
+}
+
+.container{
+position: relative;
+}
+
+.plus{
+    display: flex;
+    gap: .7rem;
+align-items: center;
+    position: absolute;
+    top: 50vh;
+    left: 75vw;
+    font: 2rem;
+    background-color: white;
+    padding: .2rem .5rem;
+    border-radius: .7rem;
+    cursor: pointer ;
+}
+
+.plus i{
+    font-size: 1.5rem;
+}
+
+.plus span{
+    font-size: 1rem;
+}
+
 
       /* Reset some default styles */
 * {
@@ -6,7 +223,7 @@
     box-sizing: border-box;
 }
 
-body {
+.main {
     font-family: "Nunito Sans", sans-serif;
     background: #f7f9fb;
     color: #333;
@@ -14,8 +231,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 80vh;
     padding: 20px;
+    width: 80vw;
 }
 
 /* Page title styling */
@@ -41,10 +259,11 @@ body {
     text-align: center;
 }
 
-.bg-btn button {
+.bg-btn a {
     padding: 12px 30px;
     font-size: 1rem;
     font-weight: 600;
+    text-decoration: none;
     border: none;
     border-radius: 8px;
     background-color: #4CAF50;
@@ -53,6 +272,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.bg-btn button:hover {
+.bg-btn a:hover {
     background-color: #45a049;
 }
