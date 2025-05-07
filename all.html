@@ -64,13 +64,55 @@
         <section class="container">
             <div class="lists">
                 <h3>My Lists</h3>
-                <ul class="ul-list"></ul>
-            </div>
+              
+                <ul>
+                  <li>
+                    <table class="list-table table table-bordered">
+                      <thead>
+                        <tr>
+                          <th><i class="bi bi-check2-square"></i> All</th>
+                          <th><i class="bi bi-card-text"></i> Name of Task</th>
+                          <th><i class="bi bi-exclamation-circle"></i> Important</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Work appointment</td>
+                          <td><i class="bi bi-star-fill"></i></td>
+                          <td><i class="bi bi-trash-fill"></i></td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>Laundry</td>
+                          <td><i class="bi bi-star-half"></i></td>
+                          <td><i class="bi bi-trash-fill"></i></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                </ul>
+              </div>
+              
 
-            <div class="plus">
-                <i class="bi bi-plus-circle-fill"></i>
-                <span>Add Task</span>
-            </div>
+                <div class="plus">
+                    <i class="bi bi-plus-circle-fill"></i>
+                    <span>Add Task</span>
+                    </div>
+
+
+      <dialog id="inputDialog">
+      <form method="dialog" id="taskForm">
+        <input type="text" id="taskInput" placeholder="Enter Task" required />
+        
+        <div class="btn-form">
+          <button type="submit" id="submitButton">Submit</button>
+          <button type="button" id="closeButton">Cancel</button>
+        </div>
+      </form>
+    </dialog>
+    
         </section>
     </main>
 
