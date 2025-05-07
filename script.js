@@ -21,24 +21,18 @@ function addTask(name, isImportant, isCompleted = false) {
     allTasks.push(task)
     // save task list to session storage
     saveTasks()
-
-
     displayAllTasks()
-
     displayTaskSummary()
 }
 
 
 
 //function to display task list
-
 function displayTasks(tasks) {
     const taskList = document.querySelector('.list-body')
 
     // clear task list
     taskList.innerHTML = ''
-
-    
 
     //loop through tasks
     tasks.forEach((task, index) => {
@@ -54,11 +48,8 @@ function displayTasks(tasks) {
        <td><div onclick="toggleImportant(${index})"> <i class ="bi ${task.isImportant ? "bi-star-fill" : "bi-star"}"></i></div></td>
 
        <td><button onclick="deleteTask(${index})"><i class ="bi bi-trash-fill"></i></button></td>
-       
        `
-
         taskElement.innerHTML = tables
-
         //add task element to task list
         taskList.append(taskElement)
     })
@@ -97,7 +88,6 @@ function getCompletedTasks() {
 
 function getImportantTasks() {
     return allTasks.filter(t => t.isImportant)
-
 }
 
 //search functionality
@@ -109,7 +99,6 @@ function filterSearch(searchterm) {
 
 
 //Function to get each to display in their respective cards
-
 function allTasksCount() {
     return allTasks.length
 }
@@ -148,13 +137,10 @@ function displayAllTasks() {
 
 
 //event to still display content when window is refreshed
-
 window.addEventListener('load', (e) => {
-
     readTasks()
     displayTaskSummary();
     displayAllTasks()
-
 
     //variable for each card
     const allCard = document.querySelector('.cards.all')
@@ -181,9 +167,6 @@ window.addEventListener('load', (e) => {
            displayAllTasks()
         }
         let filteredTasks = filterSearch(searchWord)
-        // if (filteredTasks.length === 0) {
-        //     displayTasks(['']) 
-        // } 
         displayTasks(filteredTasks)
     })
 
@@ -192,7 +175,6 @@ window.addEventListener('load', (e) => {
     const taskButton = document.querySelector(".plus");
     const closeButton = document.querySelector("dialog button");
     const taskForm = document.querySelector('#taskForm')
-    const cancelButton = document.querySelector('#closeButton')
     const taskInput = document.querySelector('#taskInput')
 
 
@@ -209,7 +191,7 @@ window.addEventListener('load', (e) => {
     taskForm.addEventListener('submit', () => {
         let task = taskInput.value.trim()
         addTask(task, false)
-        taskInput.value=''
+        taskInput.value=''//to get an empty input after a task is addedd
     })
 })
 
