@@ -65,8 +65,7 @@
             <div class="lists">
                 <h3>My Lists</h3>
               
-                <ul>
-                  <li>
+                <div class="container">
                     <table class="list-table table table-bordered">
                       <thead>
                         <tr>
@@ -76,7 +75,7 @@
                           <th></th>
                         </tr>
                       </thead>
-                      <tbody>
+                      <tbody class="list-body">
                         <tr>
                           <td><input type="checkbox"></td>
                           <td>Work appointment</td>
@@ -91,8 +90,7 @@
                         </tr>
                       </tbody>
                     </table>
-                  </li>
-                </ul>
+                </div>
               </div>
               
 
@@ -107,8 +105,8 @@
         <input type="text" id="taskInput" placeholder="Enter Task" required />
         
         <div class="btn-form">
-          <button type="submit" id="submitButton">Submit</button>
-          <button type="button" id="closeButton">Cancel</button>
+            <button type="button" id="closeButton">Cancel</button>
+            <button type="submit" id="submitButton">Submit</button>
         </div>
       </form>
     </dialog>
@@ -117,9 +115,6 @@
     </main>
 
 </div>
-
-
-
 
     <script src="./script.js"></script>
 </body>

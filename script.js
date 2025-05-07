@@ -4,7 +4,7 @@ const SESSION_NAME = "todo"
 
 //reading tasks from session storage
 function readTasks() {
-    allTasks = JSON.parse(sessionStorage.getItem(SESSION_NAME))
+    allTasks = JSON.parse(sessionStorage.getItem(SESSION_NAME)) || []
 
 }
 //function to save tasks
@@ -22,6 +22,7 @@ function addTask(name, isImportant, isCompleted = false) {
     // save task list to session storage
     saveTasks()
 
+
     displayAllTasks()
 
     displayTaskSummary()
@@ -32,7 +33,7 @@ function addTask(name, isImportant, isCompleted = false) {
 //function to display task list
 
 function displayTasks(tasks) {
-    const taskList = document.querySelector('.ul-list')
+    const taskList = document.querySelector('.list-body')
 
     // clear task list
     taskList.innerHTML = ''
@@ -52,7 +53,7 @@ function displayTasks(tasks) {
 
        <td><div onclick="toggleImportant(${index})"> <i class ="bi ${task.isImportant ? "bi-star-fill" : "bi-star"}"></i></div></td>
 
-       <td><button onclick = ""><i class ="bi bi-bin"></i></button></td>
+       <td><button onclick="deleteTask(${index})"><i class ="bi bi-trash-fill"></i></button></td>
        
        `
 
@@ -144,9 +145,12 @@ function displayAllTasks() {
 }
 
 
+
+
 //event to still display content when window is refreshed
 
 window.addEventListener('load', (e) => {
+
     readTasks()
     displayTaskSummary();
     displayAllTasks()
@@ -182,7 +186,33 @@ window.addEventListener('load', (e) => {
         // } 
         displayTasks(filteredTasks)
     })
+
+
+    const dialog = document.querySelector("dialog");
+    const taskButton = document.querySelector(".plus");
+    const closeButton = document.querySelector("dialog button");
+    const taskForm = document.querySelector('#taskForm')
+    const cancelButton = document.querySelector('#closeButton')
+    const taskInput = document.querySelector('#taskInput')
+
+
+    // "Show the dialog" button opens the dialog modally
+    taskButton.addEventListener("click", () => {
+        dialog.showModal();
+    });
+
+    // "Close" button closes the dialog
+    closeButton.addEventListener("click", () => {
+        dialog.close();
+    });
+
+    taskForm.addEventListener('submit', () => {
+        let task = taskInput.value.trim()
+        addTask(task, false)
+        taskInput.value=''
+    })
 })
+
 
 
 
