@@ -155,12 +155,15 @@ p {
 .first {
   color: brown;
 }
+
 .second {
   color: yellow;
 }
+
 .third {
   color: gray;
 }
+
 .fourth {
   color: rgba(255, 0, 0, 0.692);
 }
@@ -169,10 +172,12 @@ p {
   margin-top: 3rem;
 }
 
-.lists ul {
+.lists .container {
   text-decoration: none;
   background-color: white;
   border-radius: 0.5rem;
+  width: 100%;
+  overflow-x: scroll;
 }
 
 .container {
@@ -183,8 +188,8 @@ p {
   display: flex;
   gap: 0.7rem;
   align-items: center;
-  position: absolute;
-  top: 50vh;
+  position: fixed;
+  top: 87vh;
   left: 75vw;
   font: 2rem;
   background-color: white;
@@ -227,13 +232,15 @@ p {
   font-family: "Dancing Script", cursive;
   font-size: 2.5rem;
   color: #4a4a4a;
-  margin-bottom: 40px; /* increased from 20px */
+  margin-bottom: 40px;
+  /* increased from 20px */
   text-align: center;
 }
 
 .bg-btn {
   text-align: center;
-  margin-top: 40px; /* adds spacing above the button */
+  margin-top: 40px;
+  /* adds spacing above the button */
 }
 
 .image img {
@@ -242,7 +249,8 @@ p {
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: 0 20px 30px 20px; /* adds side margin and bottom space */
+  margin: 0 20px 30px 20px;
+  /* adds side margin and bottom space */
 }
 
 .bg-btn a {
@@ -269,6 +277,8 @@ p {
 }
 
 dialog {
+  position: absolute;
+  margin: 50px auto;
   padding: 20px;
   border: none;
   border-radius: 10px;
@@ -425,40 +435,39 @@ thead th:hover .bi {
   transform: scale(1.1);
 }
 
-/* Extra small devices (phones, 600px and down)
+/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .landing-page {
-      height: auto;
-      padding: 40px 0;
-    }
+  .landing-page {
+    height: auto;
+    padding: 40px 0;
+  }
 
-    .landing-page .main {
-      width: 90%;
-      padding: 30px 20px;
-    }
+  .landing-page .main {
+    width: 90%;
+    padding: 30px 20px;
+  }
 
-    .page-item h3 {
-      font-size: 1.8rem;
-      margin-bottom: 30px;
-    }
+  .page-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
 
-    .image img {
-      margin: 0 15px 25px 15px;
-      max-width: 100%;
-      height: auto;
-    }
+  .image img {
+    margin: 0 15px 25px 15px;
+    max-width: 100%;
+    height: auto;
+  }
 
-    .bg-btn {
-      margin-top: 30px;
-    }
+  .bg-btn {
+    margin-top: 30px;
+  }
 
-    .bg-btn a {
-      display: inline-block;
-      width: 100%;
-      padding: 12px 0;
-      font-size: 1rem;
-      text-align: center;
-    }
+  .bg-btn a {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+    text-align: center;
   }
 
   .main-container {
@@ -503,34 +512,36 @@ thead th:hover .bi {
   tbody td {
     white-space: nowrap;
   }
-}
 
-.plus {
-  margin-top: 20px;
-  justify-content: center;
-}
+  .plus {
+    margin-top: 20px;
+    justify-content: center;
+  }
 
-dialog {
-  width: 90%;
-  padding: 1rem;
-}
+  dialog {
+    width: 90%;
+    padding: 1rem;
+  }
 
-input[type="search"] {
-  padding-left: 2rem;
+  input[type="search"] {
+    padding-left: 2rem;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
+@media only screen and (min-width: 600px) {}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-}
+@media only screen and (min-width: 768px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-}
+@media only screen and (min-width: 992px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-} 
+@media only screen and (min-width: 1200px) {}
+
+
+::backdrop {
+  background-image: rgba(0, 0, 255, 0.329);
+  opacity: 0.75;
+}
