@@ -15,7 +15,7 @@ body {
   /* 3. Add accessible line-height */
   line-height: 1.5;
 
-  background-color: rgba(165, 42, 42, 0.199);
+  background-color: rgba(165, 42, 93, 0.651);
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   /* overflow-x: hidden; */
@@ -86,7 +86,8 @@ h6 {
   position: absolute;
   left: 1rem;
   bottom: 0.5rem;
-  color: black;
+  color: rgba(0, 0, 0, 0.774);
+  
   
 }
 
@@ -94,19 +95,24 @@ h6 {
   position: absolute;
   right: 1rem;
   bottom: 0.7rem;
-  color: black;
+  color: rgba(0, 0, 0, 0.781);
 }
 
 input {
   width: 100%;
-  background-color: rgba(128, 128, 128, 0.486);
+  background-color: rgba(29, 25, 68, 0.247);
   border: none;
   border-radius: 0.5rem;
   padding: 0.7rem;
+  
+}
+input::placeholder{
+  color: rgba(0, 0, 0, 0.836);
 }
 
 input[type="search"] {
   padding-left: 2.5rem;
+  
 }
 
 input:focus {
@@ -193,7 +199,7 @@ p {
   top: 87vh;
   left: 75vw;
   font: 2rem;
-  background-color: white;
+  background-color: rgb(29, 25, 68);
   padding: 0.2rem 0.5rem;
   border-radius: 0.7rem;
   cursor: pointer;
@@ -201,10 +207,12 @@ p {
 
 .plus i {
   font-size: 1.5rem;
+  color: white;
 }
 
 .plus span {
   font-size: 1rem;
+  color: white;
 }
 
 .landing-page {
@@ -220,7 +228,7 @@ p {
 .landing-page .main {
   width: 95%;
   padding: 40px;
-  background: white;
+  background:  rgba(165, 42, 93, 0.651);
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   display: flex;
@@ -261,14 +269,14 @@ p {
   text-decoration: none;
   border: none;
   border-radius: 8px;
-  background-color: #4caf50;
+  background-color: rgb(29, 25, 68);
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .bg-btn a:hover {
-  background-color: #45a049;
+  background-color: #507584;
 }
 
 .btn-form {
