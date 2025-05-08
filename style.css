@@ -86,14 +86,14 @@ h6 {
   position: absolute;
   left: 1rem;
   bottom: 0.5rem;
-  color: rgba(0, 0, 0, 0.774);
+  color: rgba(255, 255, 255, 0.705);
 }
 
 .mic {
   position: absolute;
   right: 1rem;
   bottom: 0.7rem;
-  color: rgba(0, 0, 0, 0.781);
+  color: rgba(255, 255, 255, 0.705);
 }
 
 input {
@@ -104,11 +104,12 @@ input {
   padding: 0.7rem;
 }
 input::placeholder {
-  color: rgba(0, 0, 0, 0.836);
+  color:rgba(255, 255, 255, 0.705);
 }
 
 input[type="search"] {
-  padding-left: 2.5rem;
+  padding-left: 2.7rem;
+  color: rgba(255, 255, 255, 0.705);
 }
 
 input:focus {
@@ -193,7 +194,7 @@ p {
   align-items: center;
   position: fixed;
   top: 87vh;
-  left: 75vw;
+  left: 80vw;
   font: 2rem;
   background-color: rgb(29, 25, 68);
   padding: 0.2rem 0.5rem;
@@ -525,8 +526,10 @@ thead th:hover .bi {
   }
 
   .plus {
-    margin-top: 20px;
-    justify-content: center;
+    top: 84vh;
+    left: 60vw;
+    padding: 0.3rem 0.6rem;
+    
   }
 
   dialog {
@@ -534,9 +537,6 @@ thead th:hover .bi {
     padding: 1rem;
   }
 
-  input[type="search"] {
-    padding-left: 2rem;
-  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
