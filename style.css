@@ -87,8 +87,6 @@ h6 {
   left: 1rem;
   bottom: 0.5rem;
   color: rgba(0, 0, 0, 0.774);
-  
-  
 }
 
 .mic {
@@ -104,15 +102,13 @@ input {
   border: none;
   border-radius: 0.5rem;
   padding: 0.7rem;
-  
 }
-input::placeholder{
+input::placeholder {
   color: rgba(0, 0, 0, 0.836);
 }
 
 input[type="search"] {
   padding-left: 2.5rem;
-  
 }
 
 input:focus {
@@ -217,7 +213,7 @@ p {
 
 .landing-page {
   font-family: "Nunito Sans", sans-serif;
-  background: #f7f9fb;
+  background: rgba(165, 42, 93, 0.651);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -226,30 +222,41 @@ p {
 }
 
 .landing-page .main {
-  width: 95%;
   padding: 40px;
-  background:  rgba(165, 42, 93, 0.651);
+  background: #f7f9fb;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.page-item h3 {
+.handwriting {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+}
+
+.draw-text {
   font-family: "Dancing Script", cursive;
-  font-size: 2.5rem;
-  color: #4a4a4a;
-  margin-bottom: 40px;
-  /* increased from 20px */
-  text-align: center;
+  font-size: 7rem;
+  fill: none;
+  stroke: #4a4a4a;
+  stroke-width: 2px;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawText 4s ease-out forwards;
+}
+
+@keyframes drawText {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .bg-btn {
   text-align: center;
   margin-top: 40px;
-  /* adds spacing above the button */
 }
 
 .image img {
@@ -259,7 +266,6 @@ p {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin: 0 20px 30px 20px;
-  /* adds side margin and bottom space */
 }
 
 .bg-btn a {
@@ -352,7 +358,6 @@ table {
 }
 
 thead {
-  /* background: #007bff; */
   color: solid black;
 }
 
@@ -362,7 +367,6 @@ thead th {
   text-align: center;
 }
 
-/* Table Header Icon Colors */
 .bi-check2-square {
   color: #007bff;
 }
@@ -379,7 +383,6 @@ thead th {
   color: #28a745;
 }
 
-/* Table Data Icon Colors */
 .bi-star-fill {
   color: gold;
 }
@@ -447,7 +450,6 @@ thead th:hover .bi {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .landing-page {
-    height: auto;
     padding: 40px 0;
   }
 
@@ -463,7 +465,7 @@ thead th:hover .bi {
 
   .image img {
     margin: 0 15px 25px 15px;
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
   }
 
@@ -474,7 +476,7 @@ thead th:hover .bi {
   .bg-btn a {
     display: inline-block;
     width: 100%;
-    padding: 12px 0;
+    padding: 12px;
     font-size: 1rem;
     text-align: center;
   }
@@ -538,17 +540,20 @@ thead th:hover .bi {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
-
+@media only screen and (min-width: 1200px) {
+}
 
 ::backdrop {
   background-image: rgba(0, 0, 255, 0.329);

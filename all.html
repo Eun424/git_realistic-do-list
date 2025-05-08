@@ -1,122 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="./style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<body>
-
+  <body>
     <div class="main-container">
-
-    <header>
+      <header>
         <div class="input-cont">
-            <div class="search-icon">
-                <i class="bi bi-search"></i>
-            </div>
-            <input type="search" name="" id="search" placeholder="Search......">
-            <div class="mic">
-                <i class="bi bi-mic-fill"></i>
-            </div>
+          <div class="search-icon">
+            <i class="bi bi-search"></i>
+          </div>
+          <input type="search" name="" id="search" placeholder="Search......" />
+          <div class="mic">
+            <i class="bi bi-mic-fill"></i>
+          </div>
         </div>
-    </header>
+      </header>
 
-
-
-    <main>
+      <main>
         <section class="top-sect">
-            <div class="top">
-                <div class="cards all">
-                    <div class="icons">
-                        <div class="first"><i class="bi bi-wallet-fill"></i></div><span>All Tasks</span>
-                    </div>
-                    <p id="all-task-count">0</p>
-                </div>
-
-                <div class="cards important">
-                    <div class="icons">
-                        <div class="second"><i class="bi bi-star"></i></div> <span>Important</span>
-                    </div>
-                    <p id="important-task-count">0</p>
-                </div>
-
-                <div class="cards completed">
-                    <div class="icons">
-                        <div class="third"><i class="bi bi-check-circle-fill"></i></div> <span>Completed</span>
-                    </div>
-                    <p id="completed-task-count">0</p>
-                </div>
-
-                <div class="cards">
-                    <div class="icons">
-                        <div class="fourth"><i class="bi bi-bell-fill"></i></div>
-                        <span>Reminder</span>
-                    </div>
-                    <p>0</p>
-                </div>
+          <div class="top">
+            <div class="cards all">
+              <div class="icons">
+                <div class="first"><i class="bi bi-wallet-fill"></i></div>
+                <span>All Tasks</span>
+              </div>
+              <p id="all-task-count">0</p>
             </div>
+
+            <div class="cards important">
+              <div class="icons">
+                <div class="second"><i class="bi bi-star"></i></div>
+                <span>Important</span>
+              </div>
+              <p id="important-task-count">0</p>
+            </div>
+
+            <div class="cards completed">
+              <div class="icons">
+                <div class="third"><i class="bi bi-check-circle-fill"></i></div>
+                <span>Completed</span>
+              </div>
+              <p id="completed-task-count">0</p>
+            </div>
+
+            <div class="cards">
+              <div class="icons">
+                <div class="fourth"><i class="bi bi-bell-fill"></i></div>
+                <span>Reminder</span>
+              </div>
+              <p>0</p>
+            </div>
+          </div>
         </section>
 
         <section class="container">
-            <div class="lists">
-                <h3>My Lists</h3>
-              
-                <div class="container">
-                    <table class="list-table table table-bordered">
-                      <thead>
-                        <tr>
-                          <th><i class="bi bi-check2-square"></i> All</th>
-                          <th><i class="bi bi-card-text"></i> Name of Task</th>
-                          <th><i class="bi bi-exclamation-circle"></i> Important</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody class="list-body">
-                        <tr>
-                          <td><input type="checkbox"></td>
-                          <td>Work appointment</td>
-                          <td><i class="bi bi-star-fill"></i></td>
-                          <td><i class="bi bi-trash-fill"></i></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox"></td>
-                          <td>Laundry</td>
-                          <td><i class="bi bi-star-half"></i></td>
-                          <td><i class="bi bi-trash-fill"></i></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                </div>
+          <div class="lists">
+            <h3>My Lists</h3>
+
+            <div class="container">
+              <table class="list-table table table-bordered">
+                <thead>
+                  <tr>
+                    <th><i class="bi bi-check2-square"></i> All</th>
+                    <th><i class="bi bi-card-text"></i> Name of Task</th>
+                    <th><i class="bi bi-exclamation-circle"></i> Important</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody class="list-body">
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>Work appointment</td>
+                    <td><i class="bi bi-star-fill"></i></td>
+                    <td><i class="bi bi-trash-fill"></i></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>Laundry</td>
+                    <td><i class="bi bi-star-half"></i></td>
+                    <td><i class="bi bi-trash-fill"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="plus">
+            <i class="bi bi-plus-circle-fill"></i>
+            <span>Add Task</span>
+          </div>
+
+          <dialog id="inputDialog">
+            <form method="dialog" id="taskForm">
+              <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter Task"
+                required
+              />
+
+              <div class="btn-form">
+                <button type="button" id="closeButton">Cancel</button>
+                <button type="submit" id="submitButton">Submit</button>
               </div>
-              
-
-                <div class="plus">
-                    <i class="bi bi-plus-circle-fill"></i>
-                    <span>Add Task</span>
-                    </div>
-
-
-      <dialog id="inputDialog">
-      <form method="dialog" id="taskForm">
-        <input type="text" id="taskInput" placeholder="Enter Task" required />
-        
-        <div class="btn-form">
-            <button type="button" id="closeButton">Cancel</button>
-            <button type="submit" id="submitButton">Submit</button>
-        </div>
-      </form>
-    </dialog>
-    
+            </form>
+          </dialog>
         </section>
-    </main>
-
-</div>
+      </main>
+    </div>
 
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
