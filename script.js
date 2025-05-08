@@ -178,7 +178,7 @@ window.addEventListener('load', (e) => {
     const taskInput = document.querySelector('#taskInput')
 
 
-    // "Show the dialog" button opens the dialog modally
+    // dialog modally
     taskButton.addEventListener("click", () => {
         dialog.showModal();
     });
